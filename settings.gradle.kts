@@ -24,5 +24,5 @@ pluginManagement {
     }
 }
 
-rootProject.name = "TeslaApp"
+rootProject.name = "KotlinMultiplatformExample"
 

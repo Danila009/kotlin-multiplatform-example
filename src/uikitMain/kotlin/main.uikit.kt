@@ -7,6 +7,7 @@ import androidx.compose.ui.window.Application
 import kotlinx.cinterop.*
 import platform.Foundation.NSStringFromClass
 import platform.UIKit.*
+import screen.MainScreen
 
 fun main() {
     val args = emptyArray<String>()
@@ -37,7 +38,7 @@ class SkikoAppDelegate : UIResponder, UIApplicationDelegateProtocol {
             Column {
                 // To skip upper part of screen.
                 Box(modifier = Modifier.height(30.dp))
-                TeslaApp()
+                MainScreen()
             }
         }
         window!!.makeKeyAndVisible()

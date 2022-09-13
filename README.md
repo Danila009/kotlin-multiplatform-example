@@ -1,5 +1,4 @@
-# Tesla App
-### Compose MPP Demo
+# Kotlin Multiplatform Example
 
 Compatibility: iOS/Web/Desktop/Android
 
