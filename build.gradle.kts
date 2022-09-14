@@ -10,6 +10,7 @@ buildscript {
 plugins {
     id("com.android.library")
     kotlin("multiplatform")
+    kotlin("plugin.serialization") version "1.6.10"
     id("org.jetbrains.compose")
 }
 
@@ -86,6 +87,14 @@ kotlin {
                 implementation(compose.foundation)
                 implementation(compose.material)
                 implementation(compose.runtime)
+
+                //Ktor
+                implementation("io.ktor:ktor-client-core:2.0.2")
+                implementation("io.ktor:ktor-serialization-kotlinx-json:2.0.2")
+                implementation("io.ktor:ktor-client-content-negotiation:2.0.2")
+
+                //Koin
+                implementation("io.insert-koin:koin-core:3.2.0")
             }
         }
 
@@ -99,18 +108,31 @@ kotlin {
         val desktopMain by getting {
             dependencies {
                 implementation(compose.desktop.currentOs)
+
+                //Ktor
+                implementation("io.ktor:ktor-client-okhttp:2.0.2")
+
+                //Koin
+                implementation("io.insert-koin:koin-core:3.2.0")
             }
         }
 
         val androidMain by getting {
             dependencies {
 
+                //Ktor
+                implementation("io.ktor:ktor-client-okhttp:2.0.2")
             }
         }
 
         val jsMain by getting {
             dependencies {
 
+                //Ktor
+                implementation("io.ktor:ktor-client-js:2.0.2")
+
+                //Koin
+                implementation("io.insert-koin:koin-core:3.2.0")
             }
         }
 
