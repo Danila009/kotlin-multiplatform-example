@@ -1,3 +1,5 @@
+val moko_mvvm_version:String by project
+
 buildscript {
     repositories {
         mavenLocal()
@@ -108,6 +110,9 @@ kotlin {
         val desktopMain by getting {
             dependencies {
                 implementation(compose.desktop.currentOs)
+
+                // Navigation
+                implementation("com.arkivanov.decompose:extensions-compose-jetbrains:1.0.0-alpha-04")
 
                 //Ktor
                 implementation("io.ktor:ktor-client-okhttp:2.0.2")
